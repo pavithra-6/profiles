@@ -1,0 +1,71 @@
+<html>
+<body>
+<head>
+<style type="text/css">
+div{
+width:400px;
+height:400px;
+padding:2px;
+border:2px solid red;
+background-color:Lightpink;
+}
+</style>
+</head>
+<div>
+<pre>
+input :<input type="text" name="text1" id="text1"/><br/>
+output :<input type="text" name="text3" id="text3"/><br/>
+<hr/>
+fahren to cel   : <button type="button"  name="button1" id="1" onclick="ope(1)">f->c</button><br/>
+cel to fahren   : <button type="button"  name="button2" id="2" onclick="ope(2)">c->f</button><br/>
+pounds to kilos : <button type="button"  name="button3" id="3" onclick="ope(3)">p->k</button><br/>
+kilos to pounds : <button type="button"  name="button4" id="4" onclick="ope(4)">k->p</button><br/>
+meters to yard  : <button type="button"  name="button5" id="5" onclick="ope(5)">m->y</button><br/>
+yard to meters  : <button type="button"  name="button6" id="6" onclick="ope(6)">y->m</button><br/>
+</pre>
+</div>
+<script type="text/javascript">
+function ope(op)
+{
+for(var k=1;k<=6;k++)
+{
+if(k==op)
+{
+document.getElementById(op).style.backgroundcolor="blue";
+}
+else
+{
+document.getElementById(k).style.backgroundcolor="blue";
+}
+}
+var a=parseInt(document.getElementById("text1").value);
+var b;
+if(op==1)
+{
+b=(a-32)*(5/9);
+}
+else if(op==2)
+{
+b=a*(9/5)+32;
+}
+else if(op==3)
+{
+b=a*2.2;
+}
+else if(op==4)
+{
+b=a/2.2;
+}
+else if(op==5)
+{
+b=a/0.9144;
+}
+else
+{
+b=a*0.9144;
+}
+document.getElementById("text3").value=b;
+}
+</script>
+</body>
+</html>
